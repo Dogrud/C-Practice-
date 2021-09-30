@@ -1,0 +1,11 @@
+//Exponentiation
+#include <stdio.h>
+#include <math.h>
+int power(int taban,int us)
+{
+    return pow(taban,us);
+}
+
+int main(){
+printf("%d",power(2,8));
+}
