@@ -1,1 +1,16 @@
+float fromctof(int heat){
+float result;
+result=((heat/100)*180)+32;
+return result;
+}
+float fromftoc(int heat){
+float result;
+result=((heat-32)/180)*100;
+return result;
+}
 
+
+int main(){
+printf("%.2f",fromctof(30));
+printf("%.2f",fromftoc(100));
+}
