@@ -1,0 +1,21 @@
+//Finding space with the coordinates of a rectangle
+#include <stdio.h>
+#include <math.h>
+int finding_space(int cor1,int cor2,int cor3,int cor4)
+{
+int longedge,shortedge;
+if(cor1*cor3>0)
+    longedge=fabs(cor3-cor1);
+else
+    longedge=fabs(cor3)+fabs(cor1);
+if(cor2*cor4>0)
+    shortedge=fabs(cor4-cor2);
+else
+    shortedge=fabs(cor4)+fabs(cor2);
+    return (longedge*shortedge);
+
+}
+
+int main(){
+printf("%d",finding_space(-2,3,2,-2));
+}
