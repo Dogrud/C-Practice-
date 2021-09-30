@@ -1,1 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+int DaireselMi(int number){
+int birler=number%10;
+int basamak=1;
+int temporary=number,temp=number;
+for(int i=0;1;i++)
+{
+    temporary=temporary/10;
+    if(temporary>=1)
+        basamak++;
+    else
+        break;
+}
+temp-=birler;
+temp=temp+(birler*pow(10,basamak));
+if(number*birler==temp)
+    return 1;
+else
+    return 0;
+
+
+}
+int main()
+{
+printf("1.satir =%d \n",DaireselMi(102564));
+printf("2.satir = %d\n",DaireselMi(123456));
+
+
+return 0;
+}
 
