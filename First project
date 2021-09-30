@@ -1,0 +1,41 @@
+#include <stdio.h>
+int Asali_Bul(int digit,char way[2])
+{int sonuc=0;
+    if (way=="b"){
+        for(int i=digit;1;i++){
+            for(int k=2;k<i;k++){
+                if(i%k==0){
+                    sonuc=0;
+                    break;
+                }
+                else sonuc=1;
+            }
+        if(sonuc==1)
+        return i;
+        else continue;
+        }
+    }
+
+    if (way=="k"){
+        for(int i=digit;1;i--){
+            for(int k=2;k<i;k++){
+                if(i%k==0){
+                    sonuc=0;
+                    break;
+                }
+                else sonuc=1;
+            }
+            if (sonuc==1)
+                return i;
+            else continue;
+        }
+    }
+}
+
+int main()
+{
+printf("\n%d",Asali_Bul(20,"b"));
+printf("\n%d",Asali_Bul(9,"k"));
+
+    return 0;
+}
