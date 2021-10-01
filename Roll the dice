@@ -1,0 +1,47 @@
+//roll the dice
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+void roll_the_dice(int num1,char letter)
+{
+    int counter=0,placeholder;
+    switch(letter){
+    case 'B':
+        placeholder=1;
+        break;
+    case 'K':
+        placeholder=2;
+        break;
+    case 'U':
+        placeholder=3;
+        break;
+    case 'D':
+        break;
+        placeholder=4;
+    case 'E':
+        break;
+        placeholder=5;
+    case 'A':
+        placeholder=6;
+        break;
+    default:
+        printf("istenen harflerden birini girmediniz:");}
+    srand(time(NULL));
+    for(int i=0;i<num1;i++)
+        {
+        int randomly=rand()%6+1;
+        if(placeholder==randomly)
+            counter++;
+        else
+            continue;
+        }
+        printf("%d ",counter);
+}
+
+int main(){
+printf("\nbeing first called\n");
+roll_the_dice(100,'B');
+printf("\nbeing second called\n");
+roll_the_dice(500,'A');
+return 0;
+}
