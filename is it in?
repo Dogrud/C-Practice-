@@ -1,0 +1,21 @@
+//is it in?
+#include <stdio.h>
+#include <math.h>
+
+int is_it_in(int num,int num2)
+{
+while(num>0)
+{
+    if(num%10==num2){
+        return 1;}
+    num=num/10;
+}
+return 0;
+}
+
+int main(){
+printf("%d",is_it_in(54572,3));
+printf("\n%d",is_it_in(23456,4));
+
+return 0;
+}
