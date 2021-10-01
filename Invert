@@ -1,0 +1,21 @@
+//Invert
+#include <stdio.h>
+#include <math.h>
+
+int Invert(int num)
+{
+while(num>10)
+{
+    printf("%d",num%10);
+    num=num/10;
+}
+
+}
+
+
+int main(){
+printf("%d\n",Invert(123));
+printf("%d\n",Invert(123456));
+
+return 0;
+}
