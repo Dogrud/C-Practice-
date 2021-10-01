@@ -1,0 +1,27 @@
+//Combnation Problem
+#include <stdio.h>
+#include <math.h>
+
+float Combination(int num1,int num2)
+{
+    float res1=1,res2=1,res3=1;
+    float result;
+    for(int i=1;i<=num1;i++)
+        res1*=i;
+    for(int i=1;i<=(num1-num2);i++)
+        res2*=i;
+    for(int i=1;i<=num2;i++)
+        res3*=i;
+    result=res1/(res2*res3);
+    return result;
+}
+
+
+
+int main(){
+int n,r;
+printf("Enter two number:");
+scanf("%d %d",&n,&r);
+printf("Result of the process is %.1f",Combination(n,r));
+return 0;
+}
