@@ -1,0 +1,40 @@
+//create and sort array
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+
+
+int main(){
+int num1;
+printf("Enter the number of elements:");
+scanf("%d",&num1);
+int array1[num1],counter=0;
+srand(time(NULL));
+for(int i=0;i<num1;i++)
+{
+    array1[i]=rand()%100+1;
+}
+
+for(int i=0;i<num1;i++)
+    printf(" %d ",array1[i]);
+
+for(int i=0;i<num1;i++)
+{
+    for(int k=0;k<num1;k++)
+    {
+        if(array1[i]<array1[k]){
+            int temp=array1[k];
+            array1[k]=array1[i];
+            array1[i]=temp;
+            counter++;
+        }
+    }
+}
+printf("\nSorted directory");
+for(int i=0;i<num1;i++)
+    printf(" %d ",array1[i]);
+
+    printf("\nNumber od displaced %d",counter);
+
+return 0;
+}
