@@ -1,0 +1,45 @@
+//balls between largest and smallest
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+
+int distance(float array2[],int num2)
+{
+   float largest=array2[0],smallest=array2[0];
+   int placel,places;
+    for(int i=1;i<num2;i++)
+    {
+     if(largest<array2[i])
+     {
+      largest=array2[i];
+      placel=i;
+     }
+        if(smallest>array2[i])
+     {
+      smallest=array2[i];
+      places=i;
+     }
+    }
+int result=placel-places;
+return fabs(result)-1;
+}
+
+
+
+int main(){
+int cap;
+printf("how many ball cap will you enter");
+scanf("%d",&cap);
+if(cap>50){
+    printf("wrong! you can enter up to 50 caps\n");
+    printf("how many ball cap will you enter");
+    scanf("%d",&cap);
+}
+float array[cap];
+printf("Enter %d caps:",cap);
+for(int i=0;i<cap;i++)
+    scanf("%f",&array[i]);
+
+printf("There are %d balls between the largest and the smallest",distance(array,cap));
+return 0;
+}
