@@ -1,0 +1,35 @@
+//Authorization check
+#include <stdio.h>
+#include <stdlib.h>
+
+void test(int num1,int *r1,int *r2,int *r3,int *r4)
+{
+ *r1=num1%2;
+ num1=num1/2;
+
+ *r2=num1%2;
+ num1=num1/2;
+
+  *r3=num1%2;
+ num1=num1/2;
+
+  *r4=num1%2;
+ num1=num1/2;
+}
+
+
+
+int main()
+{
+int num1,r1,r2,r3,r4;
+printf("enter your authorization code:");
+scanf("%d",&num1);
+test(num1,&r1,&r2,&r3,&r4);
+printf("\n r-read      =%d",r4);
+printf("\n w-write     =%d",r3);
+printf("\n o-operating =%d",r2);
+printf("\n p-print     =%d",r1);
+
+
+return 0;
+}
