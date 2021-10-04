@@ -1,0 +1,35 @@
+//Parse a number
+#include <stdio.h>
+#include <stdlib.h>
+
+void parse(int num2,int *res1,int *res2,int *res3,int *res4)
+{
+    *res1=num2%10;
+    num2=num2/10;
+
+    *res2=num2%10;
+    num2=num2/10;
+
+    *res3=num2%10;
+    num2=num2/10;
+
+    *res4=num2%10;
+    num2=num2/10;
+}
+
+
+
+int main()
+{
+int num1,rest1,rest2,rest3,rest4;
+printf("enter a number ");
+scanf("%d",&num1);
+parse(num1,&rest1,&rest2,&rest3,&rest4);
+printf("\nparsed of the numbers is");
+printf("\n%d\n",rest1);
+printf("\n%d\n",rest2);
+printf("\n%d\n",rest3);
+printf("\n%d\n",rest4);
+
+return 0;
+}
