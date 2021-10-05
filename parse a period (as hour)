@@ -1,0 +1,28 @@
+//parse a period (as hour)
+#include <stdio.h>
+#include <stdlib.h>
+
+void calculate(int num,int *ptr1,int *ptr2, int *ptr3)
+{
+while(1){
+    *ptr1=num/168;
+    num=num-(*ptr1*168);
+    *ptr2=num/24;
+    num=num-(*ptr2*24);
+    *ptr3=num;
+    break;
+    }
+
+}
+
+
+
+int main()
+{
+int num1,week=0,day=0,hour=0;
+printf("enter the time:(as hour)");
+scanf("%d",&num1);
+calculate(num1,&week,&day,&hour);
+printf("this period is %d week, %d day and %d hour",week,day,hour);
+return 0;
+}
