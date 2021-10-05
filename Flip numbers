@@ -1,0 +1,63 @@
+//Flip a number
+#include <stdio.h>
+#include <stdlib.h>
+
+void test(int num1,int *r1,int *r2,int *r3,int *r4,char direct)
+{
+int temp,temp2,temp3,temp4;
+if(direct=="D")
+{
+ for(int i=0;i<num1;i++)
+ {
+temp=*r1;
+temp2=*r2;
+temp3=*r3;
+temp4=*r4;
+*r1=temp4;
+*r2=temp;
+*r3=temp2;
+*r4=temp3;
+ }
+}
+
+else
+{
+  for(int i=0;i<num1;i++)
+ {
+temp=*r1;
+temp2=*r2;
+temp3=*r3;
+temp4=*r4;
+*r1=temp2;
+*r2=temp3;
+*r3=temp4;
+*r4=temp;
+ }
+}
+
+
+
+}
+
+
+
+int main()
+{
+int num1,r1,r2,r3,r4;
+char letter;
+printf("enter 4 integer:");
+scanf("%d %d %d %d",&r1,&r2,&r3,&r4);
+printf("Enter the flip direction(clockwise=D,counterclockwise=T)");
+scanf(" %c",&letter);
+printf("\nhow many times will it be changed");
+scanf("%d",&num1);
+
+test(num1,&r1,&r2,&r3,&r4,letter);
+printf("\n---------------------------------\n");
+printf("After the change\n");
+printf("a   b   c   d\n");
+printf("%d  %d  %d  %d",r1,r2,r3,r4);
+
+
+return 0;
+}
