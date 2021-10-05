@@ -1,0 +1,25 @@
+//parse a period
+#include <stdio.h>
+#include <stdlib.h>
+
+void calculate(int num,int *ptr1,int *ptr2, int *ptr3)
+{
+while(1){
+    *ptr1=num/365;
+    num=num-(*ptr1*365);
+    *ptr2=num/30;
+    num=num-(*ptr2*30);
+    *ptr3=num;
+    break;
+    }
+}
+
+int main()
+{
+int num1,year=0,month=0,day=0;
+printf("enter number of days:");
+scanf("%d",&num1);
+calculate(num1,&year,&month,&day);
+printf("this period is %d year, %d month and %d day",year,month,day);
+return 0;
+}
