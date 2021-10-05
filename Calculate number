@@ -1,0 +1,29 @@
+//calculate odd and even numbers
+#include <stdio.h>
+#include <stdlib.h>
+
+void calculate(int num,int *ptr1,int *ptr2)
+{
+while(num>0){
+
+   if(num%2==0)
+    *ptr2+=1;
+
+   else
+    *ptr1+=1;
+
+    num/=10;
+    }
+}
+
+
+
+int main()
+{
+int num1,num2=0,num3=0;
+printf("enter a 6 digit number:");
+scanf("%d",&num1);
+calculate(num1,&num2,&num3);
+printf("in %d ,%d numbers are odd and %d numbers are even",num1,num2,num3);
+return 0;
+}
