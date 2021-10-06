@@ -1,0 +1,35 @@
+//number analysis
+#include <stdio.h>
+#include <stdlib.h>
+
+void calculate(char *ptr2,int num,int *ptr,int *ptr1, int *ptr3)
+{
+    *ptr3=num%10;
+    num=num/10;
+      *ptr1=num%100;
+    num=num/100;
+      *ptr=num%10;
+switch(*ptr){
+case 1:
+    *ptr2='A';
+case 2:
+    *ptr2='B';
+case 3:
+    *ptr2='C';
+}
+
+}
+
+
+
+int main()
+{
+int num,num1=0,num2=0,num3=0;
+char block;
+printf("enter your serial number:");
+scanf("%d",&num);
+calculate(&block,num,&num1,&num2,&num3);
+printf("this serial number belong %c block %d number. and it is their %d car.",block,num2,num3);
+
+return 0;
+}
